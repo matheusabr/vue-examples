@@ -2,7 +2,8 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <!-- Using @Output Concept = Getting value from a component -->
-    <CompGreeting :user-name="userName" @feelings="outpFeelings" />
+    <CGreeting :user-name="userName" @feelings="outpFeelings" />
+    <CProducts />
     <footer>
       <small>
         Made by Matheus Abreu
@@ -13,20 +14,22 @@
 
 <script>
 // @ is an alias to /src
-import CompGreeting from '@/components/CompGreeting'
+import CGreeting from '@/components/CGreeting'
+import CProducts from '@/components/CProducts'
 
 export default {
   name: 'home',
   components: {
-    CompGreeting
+    CGreeting,
+    CProducts
   },
-  data: () => {
+  data () {
     return {
       userName: 'Mate'
     }
   },
   methods: {
-    outpFeelings: (payload) => {
+    outpFeelings: function (payload) {
       console.log('Payload from child:', payload)
     }
   }

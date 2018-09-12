@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'CompGreeting',
+  name: 'CGreeting',
   props: {
     userName: {
       type: String,
@@ -16,7 +16,7 @@ export default {
       default: 'Dude'
     }
   },
-  data: () => {
+  data () {
     return {
       feelings: 'I,m Fine Bro!'
     }
