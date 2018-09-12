@@ -2,8 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <button @click="gotoAbout">About</button> |
-      <router-link to="/products">Products</router-link>
+      <router-link to="/products">Products</router-link> |
+      <router-link to="/vuex">Vuex</router-link> |
+      <router-link to="/resume">Resume</router-link> |
+      <button @click="gotoAbout">About</button>
     </div>
     <router-view/>
   </div>
