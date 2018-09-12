@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <CompGreeting />
+    <!-- Using @Input Concept = Passing value to a component -->
+    <!-- PS: when you’re using in-DOM templates, camelCased prop names need to use their kebab-cased (hyphen-delimited) equivalents -->
+    <!-- Passing direct value -->
+    <CompGreeting user-name="Matt" />
+    <!-- Passing dynamic value -->
+    <CompGreeting :user-name="userName" />
     <footer>
       <small>
         Made by Matheus Abreu
@@ -18,6 +23,11 @@ export default {
   name: 'home',
   components: {
     CompGreeting
+  },
+  data: () => {
+    return {
+      userName: 'Mate'
+    }
   }
 }
 </script>

@@ -1,13 +1,20 @@
 <template>
   <div class="greeting">
-    <h2>Hello</h2>
-    <p>How are you?</p>
+    <h2>Hi {{userName}}</h2>
+    <p>What's up?</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CompGreeting'
+  name: 'CompGreeting',
+  props: {
+    userName: {
+      type: String,
+      required: true,
+      default: 'Dude'
+    }
+  }
 }
 </script>
 
