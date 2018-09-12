@@ -2,12 +2,22 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <button @click="gotoAbout">About</button> |
       <router-link to="/products">Products</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    gotoAbout: function () {
+      this.$router.push('/about')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
