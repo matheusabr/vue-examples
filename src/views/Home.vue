@@ -1,12 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <!-- Using @Input Concept = Passing value to a component -->
-    <!-- PS: when you’re using in-DOM templates, camelCased prop names need to use their kebab-cased (hyphen-delimited) equivalents -->
-    <!-- Passing direct value -->
-    <CompGreeting user-name="Matt" />
-    <!-- Passing dynamic value -->
-    <CompGreeting :user-name="userName" />
+    <!-- Using @Output Concept = Getting value from a component -->
+    <CompGreeting :user-name="userName" @feelings="outpFeelings" />
     <footer>
       <small>
         Made by Matheus Abreu
@@ -28,6 +24,11 @@ export default {
     return {
       userName: 'Mate'
     }
+  },
+  methods: {
+    outpFeelings: (payload) => {
+      console.log('Payload from child:', payload)
+    }
   }
 }
 </script>
@@ -35,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   small {
-    color: #2196f3;
+    color: #2196f3
   }
 }
 </style>
