@@ -21,13 +21,13 @@ export default new Vuex.Store({
   },
   actions: {
     // Called on dispatch
-    increment ({commit}) {
+    increment ({ commit }) {
       commit('increment')
     },
-    decrement ({commit}) {
+    decrement ({ commit }) {
       commit('decrement')
     },
-    productName ({commit}, payload) {
+    productName ({ commit }, payload) {
       commit('setProductName', payload)
     }
   },

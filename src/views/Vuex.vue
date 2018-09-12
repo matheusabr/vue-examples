@@ -5,9 +5,9 @@
     {{count}}
     <button @click="increment">+</button>
     <div>
-      <input 
+      <input
         v-model="productName"
-        type="text" 
+        type="text"
         alt="Product name"
       />
     </div>
@@ -19,11 +19,10 @@ export default {
   name: 'Vuex',
   data () {
     return {
-      message: 'Press the buttons to change value',
+      message: 'Press the buttons to change value'
     }
   },
   computed: {
-    // Only Getter to a one-way binding
     count: function () {
       return this.$store.getters.count
     },
@@ -35,7 +34,7 @@ export default {
       set: function (newValue) {
         this.$store.dispatch('productName', newValue)
       }
-    } 
+    }
   },
   methods: {
     increment () {
