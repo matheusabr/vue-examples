@@ -2,6 +2,11 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <footer>
+      <small>
+        Made by Matheus Abreu
+      </small>
+    </footer>
   </div>
 </template>
 
@@ -16,3 +21,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+footer {
+  small {
+    color: #2196f3;
+  }
+}
+</style>
