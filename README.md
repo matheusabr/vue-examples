@@ -2,6 +2,8 @@
 
 ## Project setup
 ```
+git clone git@github.com:matheusabr/vue-examples.git
+cd vue-examples
 npm install
 ```
 
@@ -10,7 +12,12 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build Dev - Compiles for development
+```
+npm run build:development
+```
+
+### Build Prod - Compiles and minifies for production
 ```
 npm run build
 ```
@@ -19,3 +26,4 @@ npm run build
 ```
 npm run lint
 ```
+
